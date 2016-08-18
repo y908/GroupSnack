@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RATVM</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/stylish-portfolio.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- ======================================Navigation======================================== -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+            
+            </li>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="#request" onclick=$("#menu-close").click();>Request</a>
+            </li>
+           
+            <li>
+             <a href="#team" onclick=$("#menu-close").click();>Team Members</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- =====================================Header================================================ -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <div id= "name">RATVM</div>
+            <h3>(Rage Against the Vending Machine)</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+
+    <!-- =====================================About================================================= -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="edit2">Welcome to RATVM!</h3>
+
+                    <h4 class="edit2">Did the vending machine eat your money again? Did that bag of potato chips fall midway and get stuck? <br> Don't worry, we are a student-run RCB project with one driving mission: to provide the snacks that YOU want, cheaply and conveniently. Let us know what you're craving! We will do our best to provide what the student body desires, because we know that a hungry coder is a distracted coder, and we want to contribute to an atmosphere of academic success!</h4>
+                   
+                    <img src="assets/img/bear.gif" alt="madBear">
+                    <h3 class="edit2">How it Works</h3>
+
+                    <h4 class="edit2">
+                        <hr>
+                        Snacks will be located in the general area of the Atrium.<hr>
+                        Anyone is welcome to buy snacks.<hr>
+                        We are using an honor system for payment. Please place your bills or change in the box provided.<hr>
+                        This is a non-profit project. All of the money collected is used to buy more snacks.<hr>
+                        If there is a snack you'd like to have, please make a request.
+                    </h4>
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+<!--===========================================PAYMENT==================================================-->
+  <section id="payment" class="payment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+                <h4>ISDUFSHFSIDFUHSIDFUHSDIFHSDIFUHSDIFUSHDFIUHSDFIUSHDFISHDFISUHFDSIUDHFSIDUHFISUDHFISU
+                SFSDHFSIUHFDISHDFISUDHFISUHFISDUFHISDUHFSIDUFHSIDHFSIDUHFSIUDFHSIDUHFSIUDHFSIUDHFSIUDHFSIUDFH
+                DFSODJFSODIJFSDOFIJJSODIFJSODFIJSODIFJSODIJFOSIDJFOSIDJFSOIDJFSOIDJF
+                SDOFJSDFOIJSDFOISJDFOSIJDFOSIDJFSODIFJSODIFJSODIFJSODIFJODIFJSOIDJFSOIDJFOSIJDFSOIFDJ</h4>
+                      <form action="" method="POST">
+                       <script
+                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                         data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
+                         data-amount="999"
+                         data-name="Demo Site"
+                         data-description="Widget"
+                         data-image="/img/documentation/checkout/marketplace.png"
+                         data-locale="auto">
+                       </script>
+                      </form>
+
+           </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!--=========================================PAYMENT END================================================-->
+
+
+<!-- ===============================IMAGES FOR CARAOUSEL======================================== -->   
+      <!-- Carousel container -->
+      <div id="my-pics" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+      <li data-target="#my-pics" data-slide-to="0" class="active"></li>
+      <li data-target="#my-pics" data-slide-to="1"></li>
+      <li data-target="#my-pics" data-slide-to="2"></li>
+      <li data-target="#my-pics" data-slide-to="3"></li>
+      <li data-target="#my-pics" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Content -->
+      <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="item active">
+          <img src="assets/img/apple.png" alt="images">
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="item">
+          <img src="assets/img/candy.png" alt="images">
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="item">
+          <img src="assets/img/chip.png" alt="images">
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="item">
+          <img src="assets/img/coffee.png" alt="images">
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="item">
+          <img src="assets/img/soda.png" alt="images">
+          </div>
+
+
+      </div>
+
+      <!-- Previous/Next controls -->
+      <a class="left carousel-control" href="#my-pics" role="button" data-slide="prev">
+      <span class="icon-prev" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#my-pics" role="button" data-slide="next">
+      <span class="icon-next" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+
+      </div>
+
+      <!-- Center the image -->
+      <style scoped>
+      .item img{
+          margin: 0 auto;
+          z-index: -88;
+      }
+      </style>
+
+ <!-- ===============================IMAGES END========================================= -->   
+
+
+<!-- ==========================REQUEST FORM=============================== -->
+
+<section id="request" class="request">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {{{ body }}}
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!-- =========================REQUEST FORM END ==================================-->
+
+<!--============================THE TEAM PAGE============================================-->
+<section id="team" class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 id="snack">Who are we?</h2>
+        <h4 class="lead">We are Rutgers Coding Bootcamp students who got tired of being tired, fed up with being underfed, and hungry for change.</h4>
+        <div class="row stylish-panel">
+         <div class="col-md-6">
+           <div>
+             <h3>Whitley Horn</h3>
+             <img src="assets/img/whitley.jpg" alt="Whitley" class="img-circle img-thumbnail">
+             <h4 class="staffPosition">Founder & SnackManager</h4>
+             <p>The mysterious character behind RATVM decided one fateful day that ENOUGH IS ENOUGH! Where is our pizza?!? A new project was born.</p>
+             <a href="https://github.com/whitleyblaine" class="btn btn-primary" title="Github" target="_blank">Github »</a>
+             <a href="http://whitleyblaine.strikingly.com/" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div>
+             <h3>Yana Yakubchik</h3>
+             <img src="assets/img/yana.jpg" alt="Yana" class="img-circle img-thumbnail">
+             <h4 class="staffPosition">Lead Designer & Communicator</h4>
+             <p>Born to defend Planet 4032-877 from Kid Buu & poor design, Yana is bringing artistry back to the realm of the snack.</p>
+             <a href="https://github.com/y908" class="btn btn-primary" title="Github" target="_blank">Github »</a>
+             <a href="http://yanadev.com/" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
+           </div>
+         </div>
+        </div>
+        <div class="row stylish-panel">
+         <div class="col-md-6">
+           <div>
+             <h3>Amanda Hoffman</h3>
+             <img src="assets/img/amanda.jpg" class="img-circle img-thumbnail">
+             <h4 class="staffPosition">Digital Bouncer</h4>
+             <p>Programming authentication to keep the votes free from 400+ pizza request.
+             </p>
+             <a href="https://github.com/gibbous/" class="btn btn-primary" title="Github" target="_blank">Github »</a>
+             <a href="https://www.linkedin.com/in/amanda-r-hoffman" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
+           </div>
+         </div>
+         <div class="col-md-6">
+           <div>
+             <h3>Hira Ansari</h3>
+             <img src="assets/img/hira.jpg" class="img-circle img-thumbnail">
+             <h4>CFO</h4>
+             <p>"Insert finance joke."</p>
+             <a href="https://github.com/ha3090" class="btn btn-primary" title="Github" target="_blank">Github »</a>
+             <a href="https://www.linkedin.com/in/hira-ansari-08b53a70?authType=NAME_SEARCH&authToken=VOwk&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A252146411%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1471393976203%2Ctas%3Ahi" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
+           </div>
+         </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+      <!-- /.container -->
+</section>
+<!--============================THE TEAM PAGE END============================================-->
+
+
+    <!-- ====================================Footer====================================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+              
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; By Whitley Horn, Yana Yakubchik, Amanda Hoffman, and Hira Ansari 2016</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="app/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="app/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="app/js/main.js"></script>
+
+</body>
+
+</html>

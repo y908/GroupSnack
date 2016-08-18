@@ -1,0 +1,38 @@
+
+<h2 id = "snack">What Snack or Beverage Would You Like?</h2>
+<form method="POST" action="/create" class="button-size">
+  <textarea type="text" name="plan"></textarea><br>
+  <button type="submit" class="btn btn-dark btn-lg">Request!</button>
+</form>
+<br>
+
+<!--===========================POLLBAR===========================================-->
+  <div id="container">
+     <span id="question">We'll consider snacks with 7 votes!</span>
+      {{#each plans}}
+      <div class="barbar" style="width:{{this.vote}}00px"><span>{{this.vote}}</span><a href="" bob="{{this.id}}">Vote</a> {{this.plan}}</div>
+      {{/each}}
+   </div>
+<!--===========================POLLBAR  END  ===========================================-->
+
+ 
+
+
+{{!-- <ul>
+  {{#each plans}}
+    <li>
+      <p>
+        {{this.id}}. {{this.plan}}. {{this.vote}}
+      </p>
+    </li>
+  {{/each}}
+</ul> --}}
+{{!-- 
+<h2 id = "snack">Update Your Request</h2>
+<form action="/update?_method=PUT" method="POST" class="button-size">
+  <input type="text" name="id" placeholder= "Number">
+  <textarea type="text" name="plan" placeholder="Food or Beverage Item"></textarea><br>
+  <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+</form>
+ --}}
+
