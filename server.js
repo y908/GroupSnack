@@ -2,7 +2,45 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 
+
+
+//Passport Authentication
+var passport = require('passport');
+var util = require('util');
+var session = require('express-session');
+var GitHubStrategy = require('passport-github2').Strategy;
+var partials = require('express-partials');
+
 var app = express();
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+var GITHUB_CLIENT_ID = "2e871d66505d26de2723";
+var GITHUB_CLIENT_SECRET = "0507cd2eba9b6c22c9b75341e47410c326d3b931";
+
+
+//serialize and deserialize
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
+
+
+//
+passport.use(new GitHubStrategy({
+  clientID: GITHUB_CLIENT_ID,
+  clientSecret: GITHUB_CLIENT_SECRET,
+  callbackURL: 'http://127.0.0.1:3000/auth/github/callback'
+}, function(accessToken, refreshToken, profile, done) {
+  process.nextTick(function() {
+    return done(null, profile);
+  });
+}));
+
+
 //Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + '/public'));
 
@@ -29,12 +67,13 @@ var connection = mysql.createConnection({
 
 */
 
+ 
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '',
+  password : 'b00mst1ck',
   database : 'ratvm'
 });
 
@@ -60,6 +99,21 @@ app.get('/', function(req,res) {
 
     });
 });
+
+
+app.get('/auth/github',
+  passport.authenticate('github'),
+  function(req, res){});
+app.get('/auth/github/callback',
+  passport.authenticate('github', { failureRedirect: '/' }),
+  function(req, res) {
+    console.log("ta da!");
+    res.redirect('/');
+  });
+
+
+
+
 
 app.post('/create', function(req,res){
     connection.query('INSERT INTO plans (plan) VALUES (?)', [req.body.plan], function(err, result) {
@@ -169,3 +223,6 @@ app.put('/update2/:pp/:ss', function(req,res){
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT);
+
+
+
