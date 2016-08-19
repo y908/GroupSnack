@@ -182,40 +182,6 @@
 
  <!-- ===============================IMAGES END========================================= -->   
 
- <!-- =============================LOGIN MODAL========================================== -->
-    <div id="loginModal" class="modal fade">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-              <span aria-hidden="true">&times;</span>
-               </button>
-                <h4 class="modal-title">Login</h4>
-          </div>
-          
-          <div class="modal-body">
-            <h2>Login</h2>
-              <form action="/auth/github">
-                <button id="login">Login with GitHub</button> 
-                  <a href="/auth/github">Login with GitHub</a>
-              </form>
-          </div>
-
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-  <script>
-    $("#add").on("click", function(){
-    $("#loginModal").modal('toggle');
-    return false;
-    });
-  </script>
-  
- <!-- =============================LOGIN MODAL END====================================== -->
 
 <!-- ==========================REQUEST FORM=============================== -->
 
@@ -315,6 +281,41 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="app/js/main.js"></script>
+     <!-- =============================LOGIN MODAL========================================== -->
+    <div id="loginModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+              <span aria-hidden="true">&times;</span>
+               </button>
+                <h4 class="modal-title">Login</h4>
+          </div>
+          
+          <div class="modal-body">
+            <h2>Login</h2>
+              <form action="/auth/github">
+                <button id="login">Login with GitHub</button> 
+                  <a href="/auth/github">Login with GitHub</a>
+              </form>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <script>
+    $("#add").on("click", function(){
+    $("#loginModal").modal('toggle');
+    return false;
+    });
+  </script>
+  
+ <!-- =============================LOGIN MODAL END====================================== -->
+
 
 </body>
 
