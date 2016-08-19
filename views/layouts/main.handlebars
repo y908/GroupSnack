@@ -88,26 +88,27 @@
         <!-- /.container -->
     </section>
 <!--===========================================PAYMENT==================================================-->
-  <section id="payment" class="payment">
+ <section id="payment" class="payment">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
 
-                <h4>ISDUFSHFSIDFUHSIDFUHSDIFHSDIFUHSDIFUSHDFIUHSDFIUSHDFISHDFISUHFDSIUDHFSIDUHFISUDHFISU
-                SFSDHFSIUHFDISHDFISUDHFISUHFISDUFHISDUHFSIDUFHSIDHFSIDUHFSIUDFHSIDUHFSIUDHFSIUDHFSIUDHFSIUDFH
-                DFSODJFSODIJFSDOFIJJSODIFJSODFIJSODIFJSODIJFOSIDJFOSIDJFSOIDJFSOIDJF
-                SDOFJSDFOIJSDFOISJDFOSIJDFOSIDJFSODIFJSODIFJSODIFJSODIFJODIFJSOIDJFSOIDJFOSIJDFSOIFDJ</h4>
-                      <form action="" method="POST">
-                       <script
-                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                         data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
-                         data-amount="999"
-                         data-name="Demo Site"
-                         data-description="Widget"
-                         data-image="/img/documentation/checkout/marketplace.png"
-                         data-locale="auto">
-                       </script>
-                      </form>
+                  <form action="/charge" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
+                      data-amount="500"
+                      data-name="RATVM"
+                      data-description="$5 Plan"
+                      data-image="/assets/img/hira.jpg"
+                      data-locale="auto">
+                    </script>
+                  </form>
+                  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+                  <script type="text/javascript">
+                    Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
+                  </script>
+
 
            </div>
             <!-- /.row -->
@@ -346,6 +347,41 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="app/js/main.js"></script>
+     <!-- =============================LOGIN MODAL========================================== -->
+    <div id="loginModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+              <span aria-hidden="true">&times;</span>
+               </button>
+                <h4 class="modal-title">Login</h4>
+          </div>
+          
+          <div class="modal-body">
+            <h2>Login</h2>
+              <form action="/auth/github">
+                <button id="login">Login with GitHub</button> 
+                  <a href="/auth/github">Login with GitHub</a>
+              </form>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <script>
+    $("#add").on("click", function(){
+    $("#loginModal").modal('toggle');
+    return false;
+    });
+  </script>
+  
+ <!-- =============================LOGIN MODAL END====================================== -->
+
 
 </body>
 
