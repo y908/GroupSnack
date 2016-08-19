@@ -88,26 +88,27 @@
         <!-- /.container -->
     </section>
 <!--===========================================PAYMENT==================================================-->
-  <section id="payment" class="payment">
+ <section id="payment" class="payment">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
 
-                <h4>ISDUFSHFSIDFUHSIDFUHSDIFHSDIFUHSDIFUSHDFIUHSDFIUSHDFISHDFISUHFDSIUDHFSIDUHFISUDHFISU
-                SFSDHFSIUHFDISHDFISUDHFISUHFISDUFHISDUHFSIDUFHSIDHFSIDUHFSIUDFHSIDUHFSIUDHFSIUDHFSIUDHFSIUDFH
-                DFSODJFSODIJFSDOFIJJSODIFJSODFIJSODIFJSODIJFOSIDJFOSIDJFSOIDJFSOIDJF
-                SDOFJSDFOIJSDFOISJDFOSIJDFOSIDJFSODIFJSODIFJSODIFJSODIFJODIFJSOIDJFSOIDJFOSIJDFSOIFDJ</h4>
-                      <form action="" method="POST">
-                       <script
-                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                         data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
-                         data-amount="999"
-                         data-name="Demo Site"
-                         data-description="Widget"
-                         data-image="/img/documentation/checkout/marketplace.png"
-                         data-locale="auto">
-                       </script>
-                      </form>
+                  <form action="/charge" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
+                      data-amount="500"
+                      data-name="RATVM"
+                      data-description="$5 Plan"
+                      data-image="/assets/img/hira.jpg"
+                      data-locale="auto">
+                    </script>
+                  </form>
+                  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+                  <script type="text/javascript">
+                    Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
+                  </script>
+
 
            </div>
             <!-- /.row -->

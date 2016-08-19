@@ -68,6 +68,70 @@ app.post('/create', function(req,res){
     });
 });
 
+//========================================PAYMENT JS======================================//
+
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here https://dashboard.stripe.com/account/apikeys
+
+
+// PUT THIS CODE INTO SERVER !!!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!! the below code has an error
+var stripe = require("stripe")("sk_test_0KQEJUx0c4wjut7VcRNluN4F");
+
+
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  };
+
+  console.log('connected as id ' + connection.threadId);
+
+});
+
+app.get('/', function(req,res) {
+    connection.query('SELECT * FROM plans;', function(err, data) {
+      if (err) throw err;
+
+      res.render('index', {plans: data});
+
+    });
+});
+
+app.post('/create', function(req,res){
+    connection.query('INSERT INTO plans (plan) VALUES (?)', [req.body.plan], function(err, result) {
+      if (err) throw err;
+      res.redirect('/');
+    });
+});
+
+app.post('/charge', function(req,res){
+
+  // (Assuming you're using express - expressjs.com)
+  // Get the credit card details submitted by the form
+  var stripeToken = req.body.stripeToken;
+
+  stripe.customers.create({
+    source: stripeToken,
+    description: 'RATVM Balance'
+  }).then(function(customer) {
+    return stripe.charges.create({
+      amount: 500, // amount in cents, again
+      currency: "usd",
+      customer: customer.id
+    });
+  }).then(function(charge) {
+    res.redirect('/');
+  });
+
+});
+
+//========================================PAYMENT JS======================================//
+
+
 /*app.delete('/delete', function(req,res){
     connection.query('DELETE FROM plans WHERE id = ?', [req.body.id], function(err, result) {
       if (err) throw err;
