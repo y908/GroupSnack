@@ -39,14 +39,18 @@
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
+              <a href="#stock" onclick=$("#menu-close").click();>Stock</a>
+            </li>
+            <li>
                 <a href="#request" onclick=$("#menu-close").click();>Request</a>
             </li>
             <li>
-              <a href="#stock" onclick=$("#menu-close").click();>Stock</a>
+             <a href="#payment" onclick=$("#menu-close").click();>Payment</a>
             </li>
             <li>
              <a href="#team" onclick=$("#menu-close").click();>Team Members</a>
             </li>
+           
         </ul>
     </nav>
 
@@ -70,56 +74,18 @@
                     <h4 class="edit2">Did the vending machine eat your money again? Did that bag of potato chips fall midway and get stuck? <br> Don't worry, we are a student-run RCB project with one driving mission: to provide the snacks that YOU want, cheaply and conveniently. Let us know what you're craving! We will do our best to provide what the student body desires, because we know that a hungry coder is a distracted coder, and we want to contribute to an atmosphere of academic success!</h4>
                    
                     <img src="assets/img/bear.gif" alt="madBear">
-                    <h3 class="edit2">How it Works</h3>
-
-                    <h4 class="edit2">
-                        <hr>
-                        Snacks will be located in the general area of the Atrium.<hr>
-                        Anyone is welcome to buy snacks.<hr>
-                        We are using an honor system for payment. Please place your bills or change in the box provided.<hr>
-                        This is a non-profit project. All of the money collected is used to buy more snacks.<hr>
-                        If there is a snack you'd like to have, please make a request.
-                    </h4>
-
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
-<!--===========================================PAYMENT==================================================-->
- <section id="payment" class="payment">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
 
-                  <form action="/charge" method="POST">
-                    <script
-                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
-                      data-amount="500"
-                      data-name="RATVM"
-                      data-description="$5 Plan"
-                      data-image="/assets/img/hira.jpg"
-                      data-locale="auto">
-                    </script>
-                  </form>
-                  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-                  <script type="text/javascript">
-                    Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
-                  </script>
-
-
-           </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-<!--=========================================PAYMENT END================================================-->
 
 
 <!-- ===============================IMAGES FOR CARAOUSEL======================================== -->   
+
+<section id="stock" class="stock">
       <!-- Carousel container -->
       <div id="my-pics" class="carousel slide" data-ride="carousel">
 
@@ -185,28 +151,12 @@
 
  <!-- ===============================IMAGES END========================================= -->   
 
+<!-- ========================= CURRENT STOCK ==================================-->
 
-<!-- ==========================REQUEST FORM=============================== -->
 
-<section id="request" class="request">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    {{{ body }}}
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-<!-- =========================REQUEST FORM END ==================================-->
-{{!-------------------------- Begin Stock Section ----------------------}}
-
-<section id="stock" class="stock">
-  <div class="col-lg-12">
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
         <div class="text-center">
           <h2 id="snack">Currently In Stock:</h2>
           <br>
@@ -265,6 +215,76 @@
   </div>
 </section>
 <br>
+<!-- ========================= CURRENT STOCK ==================================-->
+
+<!-- ==========================REQUEST FORM=============================== -->
+
+<section id="request" class="request">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {{{ body }}}
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!-- =========================REQUEST FORM END ==================================-->
+
+<!--===========================================PAYMENT==================================================-->
+ <section id="payment" class="payment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+                 <h3 class="edit2">How to Purchase</h3><hr>
+                   <h4 class="edit2"> Snacks will be located in the general area of the Atrium. Anyone is welcome to buy snacks. This is a non-profit project and all of the money collected is used to buy more snacks. If we have extra money leftover, we would like to put it toward a special surprise.</h4>
+                 <h3 class="edit2">Paying with Cash</h3><hr>
+                  <h4 class="edit2">We are using an honor system for payment. Please place your bills or change in the box provided. If you need change, please take money from the box.</h4>
+                 <h3 class="edit2">Paying Online</h3><hr>
+                
+
+                      {{!--   <hr>
+                        Snacks will be located in the general area of the Atrium.<hr>
+                        Anyone is welcome to buy snacks.<hr>
+                        We are using an honor system for payment. Please place your bills or change in the box provided.<hr>
+                        This is a non-profit project. All of the money collected is used to buy more snacks.<hr>
+                        If there is a snack you'd like to have, please make a request. --}}
+                
+
+                  <form action="/charge" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
+                      data-amount="500"
+                      data-name="RATVM"
+                      data-description="$5 Plan"
+                      data-image="/assets/img/hira.jpg"
+                      data-locale="auto">
+                    </script>
+                  </form>
+                  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+                  <script type="text/javascript">
+                    Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
+                  </script>
+
+                  <h4 class="edit2">We are currently accepting a minimum of $5 for online payment. If you pay this amount, please keep a personal record of the food items you take.</h4>
+
+<br>
+<br>
+<br>
+           </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!--=========================================PAYMENT END================================================-->
+
+
+
 <!--============================THE TEAM PAGE============================================-->
 <section id="team" class="team">
   <div class="container">
@@ -323,7 +343,7 @@
       <!-- /.container -->
 </section>
 <!--============================THE TEAM PAGE END============================================-->
-
+     
 
     <!-- ====================================Footer====================================== -->
     <footer>
@@ -347,7 +367,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="app/js/main.js"></script>
-     <!-- =============================LOGIN MODAL========================================== -->
+
+
+<!-- =============================LOGIN MODAL========================================== -->
     <div id="loginModal" class="modal fade">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -381,8 +403,6 @@
   </script>
   
  <!-- =============================LOGIN MODAL END====================================== -->
-
-
 </body>
 
 </html>
