@@ -76,6 +76,12 @@ ul{
 }
 
 
+#request{
+    background-color: black;
+}
+#payment{
+    background-color: #fdd31d;
+}
 /*======================team css========================================*/ 
 
 .staffName {
