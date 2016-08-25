@@ -68,16 +68,32 @@ var connection = mysql.createConnection({
 */
 
  
-
+/*
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'root',
   database : 'ratvm'
-});
+});*/
 
 
+var mysql = require('mysql');
+var connection;
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else {
+    mysql.createConnection({
+    host: 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'n0kvsf4ou0obe3o4',
+    password: 'yuayfyid2msgi21b',
+    database: 'RATVM'
+  });
+};
+
+connection.connect();
+module.exports = connection;
 
 
 
