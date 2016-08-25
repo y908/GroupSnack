@@ -27,27 +27,27 @@ h1 {
 h3 {
     font-family: monospace;
     color: #ffd51f;
-    font-size: 30pt;
+    font-size: 2.8em;
 }
 
 h4{
-    font-size: 20pt;
+    font-size: 1.6em;
 }
 
 ul{
-    font-size: 15pt;
+    font-size: 1.3em;
     color: #3aa4d8;
     font-family: monospace;
 }
+
 #snack{
-    font-size: 30pt;
+    font-size: 2.45em;
     color: #1e8f51;
     font-family: monospace;
-
 }
 
 #name{
-     font-size: 100pt;
+     font-size: 10em;
      color: white;
      font-family: monospace;
 }
@@ -59,7 +59,6 @@ ul{
 .edit2 {
     color: #1e8f51;
     font-family: monospace;
-
 }
 
 .text-vertical-center {
@@ -82,22 +81,27 @@ ul{
 #payment{
     background-color: #fdd31d;
 }
+
+.instructions {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
 /*======================team css========================================*/ 
 
 .staffName {
-   color: black;
+  color: black;
 }
 
 .staffPosition {
    color: black;
 }
 
-.stylish-panel {
- padding: 20px 0;
+/*.stylish-panel {
+ padding: 1.250em 0;
  text-align: center;
 }
 .stylish-panel > div > div{
- padding: 10px;
+ padding: 0.625em;
  border: 1px solid transparent;
  border-radius: 4px;
  transition: 0.2s;
@@ -117,7 +121,7 @@ ul{
  -o-transform: rotate(360deg);
  -ms-transform: rotate(360deg);
  transform: rotate(360deg);
-}
+}*/
 
 .hide {
  display: none;
@@ -263,8 +267,14 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding:  3.125em;
 }
+
+.about img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+};
 
 /* Services */
 
@@ -356,7 +366,7 @@ footer {
     #container {
         color: #fff;
         background:#000;
-        padding-bottom: 15px;
+        padding-bottom: 40px;
     }
 
     #container #question {
@@ -366,7 +376,7 @@ footer {
         letter-spacing: 3px;
         margin-bottom: 20px;
         padding: 10px;
-        font-size: 40px;
+        font-size: 2.4em;
     }
     #container div {
         font-weight: bold;
@@ -374,7 +384,7 @@ footer {
         background: #0099cc;
         margin-bottom: 15px;
         padding: 10px;
-        font-size: 34px;
+        font-size: 2.267em;
         color: #ffffff;
         border-left: 20px solid #333;
         width: 400px;
@@ -397,4 +407,9 @@ footer {
     div.barbar {
         margin-left: 25px;
         text-align: left;
+        margin-top: 50px;
+    }
+
+    #requestForm {
+        padding-top: 4em;
     }
