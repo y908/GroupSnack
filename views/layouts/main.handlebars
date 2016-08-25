@@ -57,8 +57,9 @@
     <!-- =====================================Header================================================ -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <div id= "name">RATVM</div>
+            <div id="name">RATVM</div>
             <h3>(Rage Against the Vending Machine)</h3>
+            <br>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
@@ -71,9 +72,12 @@
                 <div class="col-lg-12 text-center">
                     <h3 class="edit2">Welcome to RATVM!</h3>
 
-                    <h4 class="edit2">Did the vending machine eat your money again? Did that bag of potato chips fall midway and get stuck? <br> Don't worry, we are a student-run RCB project with one driving mission: to provide the snacks that YOU want, cheaply and conveniently. Let us know what you're craving! We will do our best to provide what the student body desires, because we know that a hungry coder is a distracted coder, and we want to contribute to an atmosphere of academic success!</h4>
-                   
-                    <img src="assets/img/bear.gif" alt="madBear">
+                    <h4 class="edit2">Did the vending machine eat your money again? Did that bag of potato chips fall midway and get stuck?</h4><br>
+                    <h4 class="edit2">Don't worry, we are a student-run RCB project with one driving mission: to provide the snacks that YOU want, cheaply and conveniently. Let us know what you're craving! We will do our best to provide what the student body desires, because we know that a hungry coder is a distracted coder, and we want to contribute to an atmosphere of academic success!</h4>
+
+                    <div>
+                      <img src="assets/img/bear.gif" alt="madBear">
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
@@ -239,11 +243,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
 
-                 <h3 class="edit2">How to Purchase</h3><hr>
-                   <h4 class="edit2"> Snacks will be located in the general area of the Atrium. Anyone is welcome to buy snacks. This is a non-profit project and all of the money collected is used to buy more snacks. If we have extra money leftover, we would like to put it toward a special surprise.</h4>
-                 <h3 class="edit2">Paying with Cash</h3><hr>
-                  <h4 class="edit2">We are using an honor system for payment. Please place your bills or change in the box provided. If you need change, please take money from the box.</h4>
-                 <h3 class="edit2">Paying Online</h3><hr>
+                 <h3 class="edit2 instructions">How to Purchase</h3><hr>
+                   <h4 class="edit2 instructions"> Snacks will be located in the general area of the Atrium. Anyone is welcome to buy snacks. This is a non-profit project and all of the money collected is used to buy more snacks. If we have extra money leftover, we would like to put it toward a special surprise.</h4>
+                 <h3 class="edit2 instructions">Paying with Cash</h3><hr>
+                  <h4 class="edit2 instructions">We are using an honor system for payment. Please place your bills or change in the box provided. If you need change, please take money from the box.</h4>
+                 <h3 class="edit2 instructions">Paying Online</h3><hr>
                 
 
                       {{!--   <hr>
@@ -270,7 +274,7 @@
                     Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
                   </script>
 
-                  <h4 class="edit2">We are currently accepting a minimum of $5 for online payment. If you pay this amount, please keep a personal record of the food items you take.</h4>
+                  <h4 class="edit2 instructions">We are currently accepting a minimum of $5 for online payment. If you pay this amount, please keep a personal record of the food items you take.</h4>
 
 <br>
 <br>
@@ -293,30 +297,28 @@
         <h2 id="snack">Who are we?</h2>
         <h4 class="lead">We are Rutgers Coding Bootcamp students who got tired of being tired, fed up with being underfed, and hungry for change.</h4>
         <div class="row stylish-panel">
-         <div class="col-md-6">
-           <div>
+         <div class="col-sm-6">
              <h3>Whitley Horn</h3>
              <img src="assets/img/whitley.jpg" alt="Whitley" class="img-circle img-thumbnail">
              <h4 class="staffPosition">Founder & SnackManager</h4>
              <p>The mysterious character behind RATVM decided one fateful day that ENOUGH IS ENOUGH! Where is our pizza?!? A new project was born.</p>
              <a href="https://github.com/whitleyblaine" class="btn btn-primary" title="Github" target="_blank">Github »</a>
              <a href="http://whitleyblaine.strikingly.com/" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
-           </div>
-         </div>
-         <div class="col-md-6">
-           <div>
-             <h3>Yana Yakubchik</h3>
-             <img src="assets/img/yana.jpg" alt="Yana" class="img-circle img-thumbnail">
-             <h4 class="staffPosition">Lead Designer & Communicator</h4>
-             <p>Born to defend Planet 4032-877 from Kid Buu & poor design, Yana is bringing artistry back to the realm of the snack.</p>
-             <a href="https://github.com/y908" class="btn btn-primary" title="Github" target="_blank">Github »</a>
+       </div>
+         <div class="col-sm-6">
+           <div>
+             <h3>Yana Yakubchik</h3>
+             <img src="assets/img/yana.jpg" alt="Yana" class="img-circle img-thumbnail">
+             <h4 class="staffPosition">Lead Designer & Communicator</h4>
+             <p>Born to defend Planet 4032-877 from Kid Buu & poor design, Yana is bringing artistry back to the realm of the snack.</p>
+             <a href="https://github.com/y908" class="btn btn-primary" title="Github" target="_blank">Github »</a>
              <a href="http://yanadev.com/" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
            </div>
          </div>
         </div>
+        <br>
         <div class="row stylish-panel">
-         <div class="col-md-6">
-           <div>
+         <div class="col-sm-6">
              <h3>Amanda Hoffman</h3>
              <img src="assets/img/amanda.jpg" class="img-circle img-thumbnail">
              <h4 class="staffPosition">Digital Bouncer</h4>
@@ -324,17 +326,14 @@
              </p>
              <a href="https://github.com/gibbous/" class="btn btn-primary" title="Github" target="_blank">Github »</a>
              <a href="https://www.linkedin.com/in/amanda-r-hoffman" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
-           </div>
          </div>
-         <div class="col-md-6">
-           <div>
+         <div class="col-sm-6">
              <h3>Hira Ansari</h3>
              <img src="assets/img/hira.jpg" class="img-circle img-thumbnail">
              <h4>CFO</h4>
-             <p>"Insert finance joke."</p>
+             <p>[Insert finance joke here]</p>
              <a href="https://github.com/ha3090" class="btn btn-primary" title="Github" target="_blank">Github »</a>
              <a href="https://www.linkedin.com/in/hira-ansari-08b53a70?authType=NAME_SEARCH&authToken=VOwk&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A252146411%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1471393976203%2Ctas%3Ahi" class="btn btn-success" title="Personal" target="_blank">Main Site »</a>
-           </div>
          </div>
       </div>
     </div>
