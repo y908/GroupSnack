@@ -56,12 +56,13 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
+var keys = require('./keys.js');
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   user     : 'n0kvsf4ou0obe3o4',
-  password : 'yuayfyid2msgi21b',
+  password : keys.importantKeys.jawsDBpassword,
   database : 'nze8kwnmv806oiw8'
 });
 
