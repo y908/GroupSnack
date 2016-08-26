@@ -68,20 +68,37 @@ var connection = mysql.createConnection({
 */
 
  
-
+/*
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'root',
   database : 'ratvm'
-});
+});*/
 
 
 
 
+var mysql = require('mysql');
+var connection;
 
-connection.connect(function(err) {
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else {
+    mysql.createConnection({
+    host: 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'n0kvsf4ou0obe3o4',
+    password: 'e0vfyn6evtm76apf',
+    database: 'RATVM'
+  });
+};
+
+connection.connect();
+module.exports = connection;
+
+
+/*connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
@@ -89,7 +106,7 @@ connection.connect(function(err) {
 
   console.log('connected as id ' + connection.threadId);
 
-});
+});*/
 
 app.get('/', function(req,res) {
     connection.query('SELECT * FROM plans;', function(err, data) {
