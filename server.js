@@ -56,49 +56,18 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-/*
+var keys = require('./keys.js');
+
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'sql5.freemysqlhosting.net',
-  user     : 'sql5129693',
-  password : 'kzGxKjkBrI',
-  database : 'sql5129693'
+  host     : 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user     : 'n0kvsf4ou0obe3o4',
+  password : keys.importantKeys.jawsDBpassword,
+  database : 'nze8kwnmv806oiw8'
 });
 
-*/
 
- 
-/*
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'root',
-  database : 'ratvm'
-});*/
-
-
-
-
-var mysql = require('mysql');
-var connection;
-
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-}else {
-    mysql.createConnection({
-    host: 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user: 'n0kvsf4ou0obe3o4',
-    password: 'e0vfyn6evtm76apf',
-    database: 'RATVM'
-  });
-};
-
-connection.connect();
-module.exports = connection;
-
-
-/*connection.connect(function(err) {
+connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
@@ -106,7 +75,7 @@ module.exports = connection;
 
   console.log('connected as id ' + connection.threadId);
 
-});*/
+});
 
 app.get('/', function(req,res) {
     connection.query('SELECT * FROM plans;', function(err, data) {
