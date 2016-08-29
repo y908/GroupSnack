@@ -380,10 +380,9 @@
           </div>
           
           <div class="modal-body">
-            <h2>Login</h2>
+            <h2>You must login to make a request or vote on snacks</h2>
               <form action="/auth/github">
                 <button id="login">Login with GitHub</button> 
-                  <a href="/auth/github">Login with GitHub</a>
               </form>
           </div>
 
@@ -395,9 +394,16 @@
     </div><!-- /.modal -->
 
   <script>
+  
+
     $("#add").on("click", function(){
+      if (verified == false) {
+
     $("#loginModal").modal('toggle');
     return false;
+  }
+
+
     });
   </script>
   

@@ -111,6 +111,13 @@
 
 
     }); 
+//User authentication check
+ //login variable
+
+     var verified = false;
+      console.log(verified);
+  
+
 });
 
 

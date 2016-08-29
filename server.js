@@ -5,6 +5,7 @@ var methodOverride = require('method-override')
 
 
 //Passport Authentication
+var user = require('./models/user.js');
 var passport = require('passport');
 var util = require('util');
 var session = require('express-session');
@@ -37,6 +38,7 @@ passport.use(new GitHubStrategy({
 }, function(accessToken, refreshToken, profile, done) {
   process.nextTick(function() {
     return done(null, profile);
+
   });
 }));
 
@@ -67,19 +69,14 @@ var connection = mysql.createConnection({
 
 */
 
- 
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'root',
+  password : 'b00mst1ck',
   database : 'ratvm'
 });
-
-
-
-
 
 connection.connect(function(err) {
   if (err) {
@@ -90,6 +87,8 @@ connection.connect(function(err) {
   console.log('connected as id ' + connection.threadId);
 
 });
+
+
 
 app.get('/', function(req,res) {
     connection.query('SELECT * FROM plans;', function(err, data) {
@@ -107,8 +106,12 @@ app.get('/auth/github',
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/' }),
   function(req, res) {
+    verified = true;
     console.log("ta da!");
-    res.redirect('/');
+    console.log(res);
+    console.log(verified);
+
+    res.redirect('/#request');
   });
 
 
@@ -118,7 +121,7 @@ app.get('/auth/github/callback',
 app.post('/create', function(req,res){
     connection.query('INSERT INTO plans (plan) VALUES (?)', [req.body.plan], function(err, result) {
       if (err) throw err;
-      res.redirect('/');
+      res.redirect('/#request');
     });
 });
 
