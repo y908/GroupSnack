@@ -18,39 +18,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-/*
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'sql5.freemysqlhosting.net',
-  user     : 'sql5129693',
-  password : 'kzGxKjkBrI',
-  database : 'sql5129693'
-});
-
-*/
-
-
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'ratvm'
-});
-
-
-
-
-
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  };
-
-  console.log('connected as id ' + connection.threadId);
-
-});
+//connection code moved to config/connection.js
 
 app.get('/', function(req,res) {
     connection.query('SELECT * FROM plans;', function(err, data) {
