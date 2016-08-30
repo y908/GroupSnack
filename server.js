@@ -73,7 +73,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'root',
+  password : 'b00mst1ck',
   database : 'ratvm'
 });
 
@@ -107,8 +107,10 @@ app.get('/auth/github',
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/' }),
   function(req, res) {
-    console.log("ta da!");
-    res.redirect('/');
+    console.log(res);
+
+ 
+    res.redirect('/#request');
   });
 
 

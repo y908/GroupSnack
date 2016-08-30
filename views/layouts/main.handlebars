@@ -396,7 +396,14 @@
 
   <script>
     $("#add").on("click", function(){
+      if (localStorage.getItem('verified') == false){
     $("#loginModal").modal('toggle');
+
+
+    localStorage.setItem('name', res.user.displayName);
+    localStorage.setItem('updated_at', res.user._raw.updated_at);
+    localStorage.setItem('verified', true);
+  }
     return false;
     });
   </script>

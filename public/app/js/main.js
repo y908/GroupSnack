@@ -111,6 +111,12 @@
 
 
     }); 
+
+     //local storage for user info
+
+
+    localStorage.setItem('name', res.user.displayName);
+    localStorage.setItem('updated_at', res.user._raw.updated_at);
 });
 
 
