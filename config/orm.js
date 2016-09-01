@@ -1,3 +1,6 @@
+/*
+Here is the O.R.M. where you write functions that takes inputs and conditions and turn them into database commands like SQL.
+*/
 var connection = require('../config/connection.js');
 
 function printQuestionMarks(num) {
@@ -24,7 +27,7 @@ function objToSql(ob) {
 }
 
 var orm = {
-  selectAll: function (tableInput, cb) {
+  all: function (tableInput, cb) {
     var queryString = 'SELECT * FROM ' + tableInput + ';';
     connection.query(queryString, function (err, result) {
       if (err) throw err;
@@ -33,7 +36,7 @@ var orm = {
   },
     // vals is an array of values that we want to save to cols
     // cols are the columns we want to insert the values into
-  insertOne: function (table, cols, vals, cb) {
+  create: function (table, cols, vals, cb) {
     var queryString = 'INSERT INTO ' + table;
 
     queryString = queryString + ' (';
@@ -43,16 +46,19 @@ var orm = {
     queryString = queryString + printQuestionMarks(vals.length);
     queryString = queryString + ') ';
 
-    //console.log(queryString);
+    console.log(queryString);
 
     connection.query(queryString, vals, function (err, result) {
       if (err) throw err;
       cb(result);
     });
   },
+
+
+
     // objColVals would be the columns and values that you want to update
-    // an example of objColVals would be {name: cheezburger, devoured: false}
-  updateOne: function (table, objColVals, condition, cb) {
+    // an example of objColVals would be {name: panther, sleepy: true}
+  update: function (table, objColVals, condition, cb) {
     var queryString = 'UPDATE ' + table;
 
     queryString = queryString + ' SET ';
@@ -60,12 +66,16 @@ var orm = {
     queryString = queryString + ' WHERE ';
     queryString = queryString + condition;
 
-    //console.log(queryString);
+    console.log(queryString);
+    
     connection.query(queryString, function (err, result) {
       if (err) throw err;
       cb(result);
     });
   },
+
+
+  
   delete: function (table, condition, cb) {
     var queryString = 'DELETE FROM ' + table;
     queryString = queryString + ' WHERE ';

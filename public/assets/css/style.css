@@ -1,0 +1,134 @@
+
+body {
+ background-color: white; 
+ background-image: url("../clouds.jpg");
+ 
+}
+
+#canvas {
+    padding-left: 15px;
+    line-height: 24px;
+    position: fixed;
+    z-index: -1000;
+  
+}
+
+#canvas:hover {
+    cursor: default;
+}
+
+li {
+
+  padding: 5px;
+  color: black; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 24px; 
+ /* line-height: 24px;*/ 
+/*  margin: 0 0 24px;*/ 
+  text-align: center; 
+  text-justify: inter-word;
+}
+
+h1 { 
+  color: #FFF; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 70px; 
+  font-weight: bold; 
+/*  letter-spacing: -1px; */
+/*  line-height: 1; */
+margin: 20px;
+  text-align: center; 
+  text-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+
+h2 { 
+  color: #e2e8eb; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 20px; 
+/*  font-weight: 300; */
+/*  line-height: 32px;*/ 
+  /*margin: 0 0 72px;*/ 
+  text-align: center;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+p { 
+  color: black;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 20px; /*
+  line-height: 14px;*/
+  /* margin: 0 0 24px;*/ 
+/*  text-align: justify; 
+  text-justify: inter-word; */}
+
+.label {
+  font-weight: bold;
+   font-family: 'Open Sans', sans-serif; 
+}
+
+.eat{
+  background: #ea9e65;
+  padding: 30px;
+  width: 500px;
+  margin: 0 auto;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}
+.ate{
+  background-image: url("../stack.png");
+ /* background: #9ab6d0;*/
+  background-repeat: repeat-y;
+  background-position: center;
+  padding: 30px;
+  width: 540px;
+  margin: 0 auto;
+
+}
+.create-update-form {
+  background: #ea9e65;
+  padding: 30px;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.form-group {
+/*  margin-bottom: 5px;*/
+}
+
+.container{
+  background: red;
+  border-radius: 20px; 
+  width: 350px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0 auto;
+}
+.name{
+   font-family: 'Open Sans', sans-serif; 
+     font-size: 20px;
+}
+
+button{
+  width: 150px;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  background-color: #ffe4b1;
+  font-style: italic;
+}
+
+input {
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding-left: 10px;
+}

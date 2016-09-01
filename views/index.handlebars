@@ -1,17 +1,37 @@
 
 <h2 id ="snack">What Snack or Beverage Would You Like?</h2>
+
+<div id="add"><h2>CLICK HERE TO L{{bobo}}G IN!</h2>
+
+<script type="text/javascript">
+function hideLogin(){
+  document.getElementById("add").style.visibility = "hidden";
+}
+
+  if( {{bobo}} == 0){
+    alert("You are not logged in!");
+  }else if({{bobo}} == 1){
+    alert("You are logged in and can request a snack!");
+    hideLogin();
+  }
+
+</script>
+
+</div>
+
 <form method="POST" action="/create" class="button-size" id="requestForm">
   <textarea type="text" name="plan"></textarea><br>
-  <button id="add" type="submit" class="btn btn-dark btn-lg">Request!</button>
+  <button type="submit" class="btn btn-dark btn-lg">Request!</button>
 </form>
+
+
 <br>
 
-<!--===========================POLLBAR===========================================-->
+
   <div id="container">
-     <span id="question">We'll consider snacks with 7 votes!</span>
-      {{#each plans}}
-      <div class="barbar" style="width:{{this.vote}}9%"><span>{{this.vote}}</span><a href="" bob="{{this.id}}">Vote</a> {{this.plan}}</div>
+    <span id="question">We'll consider snacks with 7 votes!</span>
+      {{#each burgers}}
+        <div class="barbar" style="width:{{this.vote}}9%"><span>{{this.vote}}</span><a href="" bob="{{this.id}}">Vote</a> {{this.plan}}</div>
       {{/each}}
-   </div>
-<!--===========================POLLBAR  END  ===========================================-->
+  </div>
 

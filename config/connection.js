@@ -1,20 +1,27 @@
 /*
-Here is where you make the connection to the burger database and export and used by the O.R.M.
+Here is where you make the connection to the database and export and used by the O.R.M.
 */
 var mysql = require('mysql');
 var connection;
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    port: 3306,
-    host: 'localhost',
-    user: 'unikitty',
-    password: 'glitterbomb',
-    database: 'burgers_db'
-  });
-};
+
+/*var connection = mysql.createConnection({
+  port: 3306,
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'ratvm'
+});*/
+
+var keys = require('../keys.js');
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'd6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user     : 'n0kvsf4ou0obe3o4',
+  password : keys.importantKeys.jawsDBpassword,
+  database : 'nze8kwnmv806oiw8'
+});
 
 connection.connect(function (err) {
   if (err) {
@@ -24,4 +31,6 @@ connection.connect(function (err) {
   console.log('connected as id ' + connection.threadId);
 });
 
+
+/*connection.connect();*/
 module.exports = connection;

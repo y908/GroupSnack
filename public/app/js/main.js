@@ -78,19 +78,22 @@
      $("#container div a").click(function() {
         if ( parseInt($(this).prev().html()) < 7){
 
-            //console.log("this works");
-            
+
+            // animates - makes 100 px wider
             $(this).parent().animate({
               width: '+=100px'
             }, 500);
 
 
-            //console.log($(this).attr("bob"));
-
+            // pull out the ID of the item clicked from 
+            // the silly-named attribute "bob"
             var voteId = $(this).attr("bob");
             var voteNum = parseInt($(this).prev().html()) + 1;
 
-             var queryURL = "/update2/"+ voteId +"/"+ voteNum +"";
+
+
+
+             var queryURL = "/update/"+ voteId +"/"+ voteNum +"";
 
              $.ajax({url: queryURL, method: 'PUT'});
 

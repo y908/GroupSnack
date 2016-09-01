@@ -1,24 +1,36 @@
 {
-  "name": "ratvm",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "RATVM - snack request",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y908/burger.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y908/burger/issues"
+  },
+  "homepage": "https://github.com/y908/burger#readme",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.4",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
-    "express-partials": "^0.3.0",
-    "express-session": "^1.14.0",
-    "handlebars": "^4.0.5",
-    "method-override": "^2.3.5",
-    "mysql": "^2.10.2",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1",
+    "stripe": "^4.9.0",
+
+
     "passport": "^0.3.2",
     "passport-github2": "^0.1.10",
-    "stripe": "^4.9.0"
+
+
+    
+    "express-session": "^1.14.0",
+    "express-partials": "^0.3.0"
   }
 }

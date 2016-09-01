@@ -20,6 +20,11 @@
     <!-- Custom Fonts -->
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+
+
+
 </head>
 
 <body>
@@ -248,30 +253,21 @@
                  <h3 class="edit2 instructions">Paying with Cash</h3><hr>
                   <h4 class="edit2 instructions">We are using an honor system for payment. Please place your bills or change in the box provided. If you need change, please take money from the box.</h4>
                  <h3 class="edit2 instructions">Paying Online</h3><hr>
-                
-
-                      {{!--   <hr>
-                        Snacks will be located in the general area of the Atrium.<hr>
-                        Anyone is welcome to buy snacks.<hr>
-                        We are using an honor system for payment. Please place your bills or change in the box provided.<hr>
-                        This is a non-profit project. All of the money collected is used to buy more snacks.<hr>
-                        If there is a snack you'd like to have, please make a request. --}}
-                
 
                   <form action="/charge" method="POST">
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="pk_test_AQxbLc3wbJu8LqyDYtHzlB5I"
+                      data-key="pk_live_SDEdKeeD5i1EcBX98dwzoEmG"
                       data-amount="500"
                       data-name="RATVM"
                       data-description="$5 Plan"
-                      data-image="/assets/img/hira.jpg"
+                      data-image="/assets/img/bear.jpg"
                       data-locale="auto">
                     </script>
                   </form>
                   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
                   <script type="text/javascript">
-                    Stripe.setPublishableKey('pk_test_AQxbLc3wbJu8LqyDYtHzlB5I');
+                    Stripe.setPublishableKey('pk_live_SDEdKeeD5i1EcBX98dwzoEmG');
                   </script>
 
                   <h4 class="edit2 instructions">We are currently accepting a minimum of $5 for online payment. If you pay this amount, please keep a personal record of the food items you take.</h4>
@@ -358,6 +354,13 @@
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
 
+
+
+
+
+
+
+
     <!-- jQuery -->
     <script src="app/js/jquery.js"></script>
 
@@ -368,8 +371,12 @@
     <script src="app/js/main.js"></script>
 
 
-<!-- =============================LOGIN MODAL========================================== -->
-    <div id="loginModal" class="modal fade">
+
+
+<!-- ============ GIT HUB LOGIN MODAL =========================== -->
+<!-- needs to be AFTER jquery.js -->
+
+  <div id="loginModal" class="modal fade">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -380,14 +387,12 @@
           </div>
           
           <div class="modal-body">
-            <h2>Login</h2>
               <form action="/auth/github">
                 <button id="login">Login with GitHub</button> 
-                  <a href="/auth/github">Login with GitHub</a>
               </form>
-          </div>
+          </div> 
 
-          <div class="modal-footer">
+<div class="modal-footer">
             <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
           </div>
         </div><!-- /.modal-content -->
@@ -396,12 +401,15 @@
 
   <script>
     $("#add").on("click", function(){
-    $("#loginModal").modal('toggle');
-    return false;
+
+      $("#loginModal").modal('toggle');
+        return false;
     });
   </script>
   
- <!-- =============================LOGIN MODAL END====================================== -->
+ <!-- ==============LOGIN MODAL END================= -->
+
+
 </body>
 
-</html>
+</HTML>
